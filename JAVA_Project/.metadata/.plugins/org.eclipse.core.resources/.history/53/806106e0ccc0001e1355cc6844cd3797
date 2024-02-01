@@ -1,0 +1,7 @@
+package com.transaction_service.service.impl;
+
+import com.transaction_service.service.AccountDetailsService;
+
+public class AccountDetailServiceImp implements AccountDetailsService {
+
+}

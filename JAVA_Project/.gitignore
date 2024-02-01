@@ -1,2 +1,46 @@
-/.metadata/
-/.classpath
+# Spring Boot specific
+/target/
+/bin/
+/build/
+/.gradle/
+.gradle/
+!/.gradle/*.properties
+
+# IDE-specific
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Eclipse-specific
+.classpath
+.project
+.settings/
+
+# Maven-specific
+log/
+target/
+release.properties
+
+# Logs
+*.log
+log/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Temporary files
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Gradle files
+.gradle/
+build/
+
+# Spring Boot DevTools
+restart.*
