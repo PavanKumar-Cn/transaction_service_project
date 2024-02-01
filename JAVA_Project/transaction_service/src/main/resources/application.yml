@@ -1,0 +1,11 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/sbr_group
+#    username: postgres
+#    password: corenuts
+#  jpa:
+#    hibernate:
+#      ddl-auto: <create | create-drop | update | validate | none>
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect

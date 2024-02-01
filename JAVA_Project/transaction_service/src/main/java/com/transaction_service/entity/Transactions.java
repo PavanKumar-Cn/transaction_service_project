@@ -16,7 +16,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "Transactions")
-public class Transactions extends Auditable<String>{
+public class Transactions extends Auditable<String> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +35,5 @@ public class Transactions extends Auditable<String>{
 
 	@Column(name = "transaction_date", nullable = false)
 	private Date transactionDate;
-
-	
 
 }

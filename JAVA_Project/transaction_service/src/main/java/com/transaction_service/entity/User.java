@@ -11,11 +11,11 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "login")
-public class User extends Auditable<String> {
+public class User extends Auditable<Integer> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	@Column(name = "user_name", unique = true, length = 50, nullable = false)
 	private String userName;
