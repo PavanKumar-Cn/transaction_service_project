@@ -1,5 +1,7 @@
 package com.transaction_service.entity;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,20 +15,20 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "AccountDetails")
-public class AccountDetails {
+public class AccountDetails extends Auditable<String> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer accountId;
 
-	@Column(name = "account_holder_name", length = 40, nullable = false)
+	@Column(name = "account_holder_name", length = 50, nullable = false)
 	private String accountHolderName;
 
-	@Column(name = "account_number", length = 20, nullable = false)
+	@Column(name = "account_number", length = 25, nullable = false)
 	private String accountNumber;
 
 	@Column(name = "balance")
-	private Long balance;
+	private BigDecimal balance;
 
 	@Column(name = "exclude", length = 10, nullable = false)
 	private String exclude;
@@ -34,7 +36,7 @@ public class AccountDetails {
 	@Column(name = "status", length = 10, nullable = false)
 	private String status;
 
-	@Column(name = "account_type", length = 10, nullable = false)
+	@Column(name = "account_type", length = 20, nullable = false)
 	private String accountType;
 
 	@ManyToOne

@@ -1,5 +1,6 @@
 package com.transaction_service.entity;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 
 import jakarta.persistence.Column;
@@ -15,7 +16,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "Transactions")
-public class Transactions {
+public class Transactions extends Auditable<String>{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,12 +31,11 @@ public class Transactions {
 	private AccountDetails accountDetails;
 
 	@Column(name = "amount", nullable = false)
-	private Long amount;
+	private BigDecimal amount;
 
-	@Column(name = "date", nullable = false)
-	private Date date;
+	@Column(name = "transaction_date", nullable = false)
+	private Date transactionDate;
 
-	@Column(name = "created_by", length = 30, nullable = false)
-	private String createdBy;
+	
 
 }

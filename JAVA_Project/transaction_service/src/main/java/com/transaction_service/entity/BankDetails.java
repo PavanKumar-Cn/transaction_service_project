@@ -12,13 +12,13 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "bank_details")
-public class BankDetails {
+public class BankDetails extends Auditable<String> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer bankId;
 
-	@Column(name = "bank_name", unique = true, length = 20, nullable = false)
+	@Column(name = "bank_name", unique = true, length = 50, nullable = false)
 	private String bankName;
 
 	@Column(name = "status", length = 10, nullable = false)
