@@ -1,0 +1,35 @@
+package com.transaction_service.service.impl;
+
+import java.time.Instant;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.transaction_service.entity.User;
+import com.transaction_service.repository.UserRepository;
+import com.transaction_service.service.UserService;
+
+@Service
+public class UserServiceImp implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Override
+	public User saveUser(User user) {
+		user.setCreatedBy("admin");
+		user.setCreatedDate(Instant.now());
+		return userRepository.save(user);
+	}
+
+	@Override
+	public User updateUser(User user) throws NotFoundException {
+		//user.setLastModifiedBy(admin).set
+		User dbUser = userRepository.findById(user.getId()).orElseThrow(()-> new NotFoundException("User Details Not found with provided details..."));
+		if(dbUser.)
+	}
+	
+	
+
+}
