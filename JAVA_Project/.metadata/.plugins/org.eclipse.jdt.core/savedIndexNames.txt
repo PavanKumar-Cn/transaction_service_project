@@ -81,7 +81,6 @@ INDEX VERSION 1.134+/home/corenuts/CnProjects/transaction_service_project/JAVA_P
 2910531680.index
 1160918584.index
 1587649645.index
-613012728.index
 1483222129.index
 248583416.index
 2131248519.index
