@@ -3,12 +3,14 @@ package com.transaction_service.service.impl;
 import java.time.Instant;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.transaction_service.entity.User;
 import com.transaction_service.exception.UserNotFound;
 import com.transaction_service.repository.UserRepository;
 import com.transaction_service.service.UserService;
 
+@Service
 public class UserServiceImp implements UserService {
 
 	@Autowired

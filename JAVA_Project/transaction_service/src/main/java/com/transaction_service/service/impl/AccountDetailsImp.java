@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.transaction_service.entity.AccountDetails;
+import com.transaction_service.exception.AccountNotFound;
+import com.transaction_service.exception.BankNotFound;
 import com.transaction_service.repository.AccountDetailsRepository;
 import com.transaction_service.service.AccountDetailsService;
 
@@ -46,8 +48,8 @@ public class AccountDetailsImp implements AccountDetailsService {
 	}
 
 	@Override
-	public AccountDetails getById(Integer id) {
-		return repository.findById(id).get();
+	public AccountDetails getById(Integer id) throws AccountNotFound {
+		return repository.findById(id).orElseThrow(() -> new AccountNotFound("BAnk Not found"));
 	}
 
 }
