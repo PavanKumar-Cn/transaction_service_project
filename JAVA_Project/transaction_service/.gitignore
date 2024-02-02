@@ -27,7 +27,7 @@ build/
 *.iws
 *.iml
 out/
-
+/.metadata/
 # Visual Studio Code
 .vscode/
 

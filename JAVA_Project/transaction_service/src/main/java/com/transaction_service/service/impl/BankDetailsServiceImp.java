@@ -3,9 +3,11 @@ package com.transaction_service.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.transaction_service.entity.BankDetails;
+import com.transaction_service.exception.BankNotFound;
 import com.transaction_service.repository.BankDetailsRepository;
 import com.transaction_service.service.BankDetailsService;
 
@@ -45,8 +47,8 @@ public class BankDetailsServiceImp implements BankDetailsService {
 	}
 
 	@Override
-	public BankDetails getById(Integer id) {
-		return bankDetailsRepository.findById(id).get();
+	public BankDetails getById(Integer id) throws BankNotFound {
+		return bankDetailsRepository.findById(id).orElseThrow(() -> new BankNotFound("BAnk Not found"));
 	}
 
 }
