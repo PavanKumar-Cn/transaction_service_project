@@ -1,7 +1,0 @@
-package com.transaction_service.service;
-
-import org.springframework.stereotype.Service;
-
-public interface AccountDetailsService {
-
-}

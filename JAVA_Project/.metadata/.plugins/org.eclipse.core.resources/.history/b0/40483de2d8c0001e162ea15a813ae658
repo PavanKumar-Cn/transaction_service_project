@@ -1,9 +1,0 @@
-package com.transaction_service.service;
-
-import com.transaction_service.entity.User;
-
-public interface UserService {
-
-	String saveUser(User user);
-
-}

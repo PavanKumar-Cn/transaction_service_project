@@ -1,6 +1,0 @@
-package com.transaction_service.service;
-
-@Service4
-public interface AccountDetailsService {
-
-}

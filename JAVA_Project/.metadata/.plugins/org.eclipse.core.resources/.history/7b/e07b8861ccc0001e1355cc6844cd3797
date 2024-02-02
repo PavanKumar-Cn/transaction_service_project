@@ -1,7 +1,0 @@
-package com.transaction_service.service.impl;
-
-import com.transaction_service.service.TransactionService;
-
-public class TransactionsServiceImp implements TransactionService {
-
-}
