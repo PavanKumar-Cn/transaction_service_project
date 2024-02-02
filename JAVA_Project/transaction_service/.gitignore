@@ -1,47 +1,33 @@
-# Spring Boot specific
-/target/
-/bin/
-/build/
-/.gradle/
-.gradle/
-!/.gradle/*.properties
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# IDE-specific
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
 *.ipr
-*.iws
-.idea/
 
-# Eclipse-specific
-.classpath
-.project
-.settings/
-
-# Maven-specific
-log/
-target/
-release.properties
-
-# Logs
-*.log
-log/
-
-# Package Files
-*.jar
-*.war
-*.ear
-
-# Temporary files
-*.tmp
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# Gradle files
-.gradle/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Spring Boot DevTools
-restart.*
-.metadata/
+### VS Code ###
+.vscode/
