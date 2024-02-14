@@ -6,6 +6,7 @@
 # Maven
 log/
 logs/
+*.jar
 *.war
 *.ear
 hs_err_pid*
