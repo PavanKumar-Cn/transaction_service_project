@@ -1,5 +1,4 @@
 # Spring Boot
-/target/
 *.iml
 .idea/
 *.log
